@@ -1,0 +1,15 @@
+<div class="container">
+<div>
+  <label for="directoryPath">Directory Path: </label>
+  <input type="text" [(ngModel)]="directoryPath" id="directoryPath">
+  <button (click)="getDuplicates()">Find Duplicates</button>
+  <button (click)="deleteDuplicates()">Delete Duplicates</button>
+</div>
+
+<div *ngFor="let group of duplicateFiles">
+  <div *ngFor="let file of group">
+    {{ file }}
+  </div>
+  <hr>
+</div>
+</div>
